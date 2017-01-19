@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set LOGIN "XXXXXXXXXXXXXX@sftp.apple.com"
+set PASSWD "YYYYYYYYYYYYYY"
+
+spawn sftp $LOGIN@upload.appleschoolcontent.com:/dropbox/
+expect "password:"
+send "$PASSWD\n"
+expect "sftp>"
+send "put ./Archive.zip\n"
+expect "sftp>"
+send "exit\n"
+interact
