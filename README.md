@@ -9,4 +9,5 @@ Usage: convert2asm format source_directory [password_policy_option] [--parse-ema
        [--parse-emails]: parse staff & students emails if available. Emails are ignored by default.
 
 Example: convert2asm siecle+stsweb ~/XML_EXPORTS/ 6 --parse-emails
-         convert2asm anonymous ~/ANONYMOUS_TEMPLATES/
+
+Example: convert2asm anonymous ~/ANONYMOUS_TEMPLATES/
