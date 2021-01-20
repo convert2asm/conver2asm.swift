@@ -1,7 +1,7 @@
 # convert2asm
 Utility to convert french schools' staff, students and classes information to a compatible Apple School Manager CSV archive ready for SFTP upload.
 
-Usage: convert2asm format source_directory [password_policy_option] [--parse-emails] [--split-classes-by-topic] [--disable-classes-prefix] [--max-instructors-per-class=X]
+Usage: convert2asm format source_directory [password_policy_option] [--parse-emails] [--split-classes-by-topic] [--disable-classes-prefix] [--max-instructors-per-class=X] [--class-id-separator=X]
 
        format: source files format (siecle+stsweb, itop, anonymous, ...)
        source_directory: path to the directory containing the files to convert
@@ -10,6 +10,7 @@ Usage: convert2asm format source_directory [password_policy_option] [--parse-ema
        [--split-classes-by-topic]: create one Apple School Manager class per topic teached in the class (ex: "class 1 - Maths", "class 1 - Biology", ...).
        [--disable-classes-prefix]: stop prefixing classes by their location name.
        [--max-instructors-per-class=X]: override max number of instructors per class (15 instructors by default).
+       [--class-id-separator=X]: character used to replace blanks when deriving a class ID from the name. The default separator is '_'.
 
 Example: convert2asm siecle+stsweb ~/XML_EXPORTS/ 6 --parse-emails --max-instructors-per-class=25
 
